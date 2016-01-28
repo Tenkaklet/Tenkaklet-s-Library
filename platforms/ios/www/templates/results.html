@@ -1,0 +1,29 @@
+<ion-view title="We found {{numOfBooks}}">
+  <ion-content overflow-scroll="true" padding="true" class="has-header">
+    <div class="list card" ng-repeat="book in books">
+      <div class="item">
+        <h2>{{book.volumeInfo.title}}</h2>
+        <p>{{book.volumeInfo.authors | noHTML}}</p>
+        <p>{{book.volumeInfo.categories | noHTML}}</p>
+        <p>{{book.volumeInfo.publishedDate | date: 'mediumDate'}}</p>
+      </div>
+      <div class="item item-body">
+        <img class="full-image" ng-src="{{book.volumeInfo.imageLinks.thumbnail}}">
+        <p>
+         {{book.volumeInfo.description | limitTo: 150}} ...
+        </p>
+        <p></p>
+      </div>
+      <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#/side-menu/specificBook/{{book.id}}">
+          <i class="icon ion-ios-book"></i>
+          Read More
+        </a>
+        <a class="tab-item" ng-click="addBook(book)">
+          <i class="icon ion-share"></i>
+          Save
+        </a>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

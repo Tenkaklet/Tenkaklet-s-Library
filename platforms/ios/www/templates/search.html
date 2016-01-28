@@ -1,0 +1,11 @@
+<ion-view title="">
+    <ion-content overflow-scroll="true" padding="true" class="has-header has-footer">
+        <form class="list" ng-submit="bookSearch(bookTitle)">
+            <label class="item item-input" name="bookTitle">
+                <i class="icon ion-search placeholder-icon"></i>
+                <input type="search" placeholder="Search Book" ng-model="bookTitle">
+            </label>
+        </form>
+        <button class="button button-royal button-block button-small" ng-disabled="!bookTitle" ng-click="bookSearch(bookTitle)">Search</button>
+    </ion-content>
+</ion-view>

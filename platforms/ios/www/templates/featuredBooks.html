@@ -1,0 +1,29 @@
+<ion-view title="Featured Books">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <h3>{{featuredBook}}</h3>
+        <div class="list card" ng-repeat="book in books">
+
+          <div class="item item-avatar">
+            <h2>{{book.volumeInfo.title}}</h2>
+            <p>{{book.volumeInfo.authors[0]}}</p>
+          </div>
+
+          <div class="item item-body">
+            <img class="item-image" ng-src="{{book.volumeInfo.imageLinks.thumbnail}}" alt="" />
+            <p>{{book.volumeInfo.description | limitTo: 150}}...</p>
+          </div>
+
+          <div class="item tabs tabs-secondary tabs-icon-left">
+            <a class="tab-item" href="#/side-menu/specificBook/{{book.id}}">
+              <i class="icon ion-chatbox"></i>
+              Read More
+            </a>
+            <a class="tab-item" ng-click="addBook(book)">
+              <i class="icon ion-share"></i>
+              Save
+            </a>
+          </div>
+
+        </div>
+    </ion-content>
+</ion-view>

@@ -1,0 +1,12 @@
+<ion-view title="Saved Books" ng-init="list()">
+  <ion-content overflow-scroll="true" padding="true" class="has-header">
+      <ul class="list">
+          <li class="item item-button-right" ng-repeat="book in books">
+              <a href="#/side-menu/specificBook/{{book.id}}">{{book.name}}</a>
+              <button class="button button-assertive button-clear" ng-click="remove(book)">
+                  <i class="icon ion-close-round"></i>
+              </button>
+          </li>
+      </ul>
+  </ion-content>
+</ion-view>

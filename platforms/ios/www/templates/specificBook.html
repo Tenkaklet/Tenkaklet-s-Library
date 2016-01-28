@@ -1,0 +1,27 @@
+<ion-view title="">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
+        <div class="row">
+          <div class="col col-50">
+              <img ng-src="{{bookIMG}}">
+          </div>
+          <div class="col">
+              <h4>{{bookName}}</h4>
+              <p><strong>{{author | noHTML}}</strong></p>
+              <p>{{publisher}}</p>
+              <p ng-repeat="cat in categories"><small>{{cat}}</small></p>
+          </div>
+        </div>
+        <h4 class="title">About The Book</h4>
+        <div hm-read-more hm-text="{{description}}" hm-limit="110" hm-more-text="More" hm-less-text="Less" hm-dots-class="dots" hm-link-class="read-more" class="padding">
+
+        </div>
+        <article id="specOfBook">
+            <h4 class="title">Specifications</h4>
+            <div class="padding">
+                <p><strong>ISBN: </strong> {{ISBN}}</p>
+                <p>{{bookType}}, {{pages}} pages</p>
+                <p><strong>Published: </strong>  {{pubDate | date: 'mediumDate'}}</p>
+            </div>
+        </article>
+    </ion-content>
+</ion-view>

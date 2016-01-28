@@ -1,0 +1,12 @@
+{
+  "name": "Bookworm",
+  "app_id": "9972c6df",
+  "gulpStartupTasks": [
+    "sass",
+    "watch"
+  ],
+  "watchPatterns": [
+    "www/**/*",
+    "!www/lib/**/*"
+  ]
+}

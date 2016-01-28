@@ -1,0 +1,22 @@
+<ion-view title="Signup">
+    <ion-content overflow-scroll="true" padding="true" scroll="false" class="has-header">
+        <form class="list" ng-submit="register(user)">
+            <ion-list>
+                <label class="item item-input">
+                    <span class="input-label">Name</span>
+                    <input type="text" placeholder="" ng-model="user.name">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">E-mail</span>
+                    <input type="email" placeholder="" ng-model="user.email">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Password</span>
+                    <input type="password" placeholder="" ng-model="user.password">
+                </label>
+                <p style="color: red; text-align: center; padding: 10px;" ng-show="regError">{{regErrorMessage}}</p>
+            </ion-list>
+            <button class="button button-stable button-block">Sign up</button>
+        </form>
+    </ion-content>
+</ion-view>
